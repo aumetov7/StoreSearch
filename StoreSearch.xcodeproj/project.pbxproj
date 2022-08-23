@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		D8B32CC228B4E367005D923F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC128B4E367005D923F /* AppDelegate.swift */; };
 		D8B32CC428B4E367005D923F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC328B4E367005D923F /* SceneDelegate.swift */; };
-		D8B32CC628B4E367005D923F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC528B4E367005D923F /* ViewController.swift */; };
+		D8B32CC628B4E367005D923F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC528B4E367005D923F /* SearchViewController.swift */; };
 		D8B32CC928B4E367005D923F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B32CC728B4E367005D923F /* Main.storyboard */; };
 		D8B32CCB28B4E369005D923F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B32CCA28B4E369005D923F /* Assets.xcassets */; };
 		D8B32CCE28B4E369005D923F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B32CCC28B4E369005D923F /* LaunchScreen.storyboard */; };
+		D8B32CD628B4EF8A005D923F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CD528B4EF8A005D923F /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8B32CBE28B4E367005D923F /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B32CC128B4E367005D923F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B32CC328B4E367005D923F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8B32CC528B4E367005D923F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8B32CC528B4E367005D923F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D8B32CC828B4E367005D923F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8B32CCA28B4E369005D923F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8B32CCD28B4E369005D923F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8B32CCF28B4E369005D923F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B32CD528B4EF8A005D923F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				D8B32CC128B4E367005D923F /* AppDelegate.swift */,
 				D8B32CC328B4E367005D923F /* SceneDelegate.swift */,
-				D8B32CC528B4E367005D923F /* ViewController.swift */,
+				D8B32CC528B4E367005D923F /* SearchViewController.swift */,
+				D8B32CD528B4EF8A005D923F /* SearchResult.swift */,
 				D8B32CC728B4E367005D923F /* Main.storyboard */,
 				D8B32CCA28B4E369005D923F /* Assets.xcassets */,
 				D8B32CCC28B4E369005D923F /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B32CC628B4E367005D923F /* ViewController.swift in Sources */,
+				D8B32CC628B4E367005D923F /* SearchViewController.swift in Sources */,
 				D8B32CC228B4E367005D923F /* AppDelegate.swift in Sources */,
+				D8B32CD628B4EF8A005D923F /* SearchResult.swift in Sources */,
 				D8B32CC428B4E367005D923F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
