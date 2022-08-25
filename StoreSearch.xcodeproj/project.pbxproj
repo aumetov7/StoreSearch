@@ -17,6 +17,7 @@
 		D8B32CDA28B5039F005D923F /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CD928B5039F005D923F /* SearchResultCell.swift */; };
 		D8B32CDC28B505D9005D923F /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B32CDB28B505D9005D923F /* NothingFoundCell.xib */; };
 		D8B32CDE28B7843C005D923F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B32CDD28B7843B005D923F /* LoadingCell.xib */; };
+		D8B32CE028B79CF2005D923F /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CDF28B79CF2005D923F /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D8B32CD928B5039F005D923F /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D8B32CDB28B505D9005D923F /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		D8B32CDD28B7843B005D923F /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		D8B32CDF28B79CF2005D923F /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D8B32CC528B4E367005D923F /* SearchViewController.swift */,
 				D8B32CD928B5039F005D923F /* SearchResultCell.swift */,
 				D8B32CD528B4EF8A005D923F /* SearchResult.swift */,
+				D8B32CDF28B79CF2005D923F /* UIImageView+DownloadImage.swift */,
 				D8B32CC728B4E367005D923F /* Main.storyboard */,
 				D8B32CD728B4FE1E005D923F /* SearchResultCell.xib */,
 				D8B32CDB28B505D9005D923F /* NothingFoundCell.xib */,
@@ -154,6 +157,7 @@
 			files = (
 				D8B32CC628B4E367005D923F /* SearchViewController.swift in Sources */,
 				D8B32CC228B4E367005D923F /* AppDelegate.swift in Sources */,
+				D8B32CE028B79CF2005D923F /* UIImageView+DownloadImage.swift in Sources */,
 				D8B32CD628B4EF8A005D923F /* SearchResult.swift in Sources */,
 				D8B32CC428B4E367005D923F /* SceneDelegate.swift in Sources */,
 				D8B32CDA28B5039F005D923F /* SearchResultCell.swift in Sources */,
