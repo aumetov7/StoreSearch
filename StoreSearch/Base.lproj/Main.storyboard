@@ -26,13 +26,34 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="App name, artist, song, album, e-book" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-jD-m0B">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <color key="barTintColor" name="SearchBar"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Xwa-6K-UAa"/>
                                 </connections>
                             </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7LG-7W-jyD">
+                                <rect key="frame" x="0.0" y="75" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="BoW-6q-qTD">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="MoC-7Y-wdT">
+                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="D7W-ZK-uMW"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,11 +64,13 @@
                             <constraint firstItem="ZtR-jD-m0B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i4w-pm-vg0"/>
                             <constraint firstItem="vPK-0d-f5a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ix5-43-ziE"/>
                             <constraint firstItem="vPK-0d-f5a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nNN-fi-vID"/>
+                            <constraint firstItem="7LG-7W-jyD" firstAttribute="top" secondItem="ZtR-jD-m0B" secondAttribute="bottom" id="ro2-kx-3Av"/>
                             <constraint firstItem="ZtR-jD-m0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xpW-gi-4yS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="ZtR-jD-m0B" id="EH8-SS-r2X"/>
+                        <outlet property="segmentedControl" destination="MoC-7Y-wdT" id="zdj-BT-bC5"/>
                         <outlet property="tableView" destination="vPK-0d-f5a" id="vX0-H8-fZY"/>
                     </connections>
                 </viewController>
