@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="51" width="667" height="32"/>
                                 <items>
                                     <barButtonItem style="plain" id="BoW-6q-qTD">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="MoC-7Y-wdT">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="MoC-7Y-wdT">
                                             <rect key="frame" x="20" y="0.0" width="627" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -89,24 +89,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVH-XN-dBw">
-                                <rect key="frame" x="291.5" y="177" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8hU-iJ-LPh">
+                                <rect key="frame" x="275" y="174" width="116" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="V7b-0J-22A" eventType="valueChanged" id="e8c-KA-fT0"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFT-Nl-6hU">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="YIA-jm-PB0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="x0m-Kx-Z1Y"/>
+                                <connections>
+                                    <outlet property="delegate" destination="V7b-0J-22A" id="qq7-QK-NJa"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RS5-Kq-BuJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eVH-XN-dBw" firstAttribute="centerX" secondItem="waq-21-Eph" secondAttribute="centerX" id="0Tv-81-cT4"/>
-                            <constraint firstItem="eVH-XN-dBw" firstAttribute="centerY" secondItem="waq-21-Eph" secondAttribute="centerY" id="UYt-vE-LQh"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControll" destination="8hU-iJ-LPh" id="SAV-kD-5As"/>
+                        <outlet property="scrollView" destination="gFT-Nl-6hU" id="dys-Xt-ygI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdj-sS-sps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="844"/>
+            <point key="canvasLocation" x="69.715142428785612" y="844"/>
         </scene>
         <!--Detail-->
         <scene sceneID="QjE-bb-bgx">
