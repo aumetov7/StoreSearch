@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "HhE-6q-Uj6"; */
+"HhE-6q-Uj6.text" = "Тип:";
+
+/* Class = "UIButton"; normalTitle = "$9.99"; ObjectID = "KA5-d0-n4g"; */
+"KA5-d0-n4g.normalTitle" = "$9.99";
+
+/* Class = "UISegmentedControl"; MoC-7Y-wdT.segmentTitles[0] = "All"; ObjectID = "MoC-7Y-wdT"; */
+"MoC-7Y-wdT.segmentTitles[0]" = "Все";
+
+/* Class = "UISegmentedControl"; MoC-7Y-wdT.segmentTitles[1] = "Music"; ObjectID = "MoC-7Y-wdT"; */
+"MoC-7Y-wdT.segmentTitles[1]" = "Музыка";
+
+/* Class = "UISegmentedControl"; MoC-7Y-wdT.segmentTitles[2] = "Software"; ObjectID = "MoC-7Y-wdT"; */
+"MoC-7Y-wdT.segmentTitles[2]" = "Приложения";
+
+/* Class = "UISegmentedControl"; MoC-7Y-wdT.segmentTitles[3] = "E-books"; ObjectID = "MoC-7Y-wdT"; */
+"MoC-7Y-wdT.segmentTitles[3]" = "Книги";
+
+/* Class = "UILabel"; text = "Genre Value"; ObjectID = "PiV-oq-9CW"; */
+"PiV-oq-9CW.text" = "Genre Value";
+
+/* Class = "UILabel"; text = "Kind Value"; ObjectID = "UaO-nJ-3mA"; */
+"UaO-nJ-3mA.text" = "Kind Value";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "Zim-zv-rcR"; */
+"Zim-zv-rcR.text" = "Artist Name";
+
+/* Class = "UISearchBar"; placeholder = "App name, artist, song, album, e-book"; ObjectID = "ZtR-jD-m0B"; */
+"ZtR-jD-m0B.placeholder" = "Приложение, исполнитель, песня, альбом, книга";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "epL-Q4-PbK"; */
+"epL-Q4-PbK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "khv-Xl-Hhp"; */
+"khv-Xl-Hhp.text" = "Name";
+
+/* Class = "UILabel"; text = "Genre:"; ObjectID = "qi5-ii-Qtx"; */
+"qi5-ii-Qtx.text" = "Жанр:";
