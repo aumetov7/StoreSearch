@@ -13,9 +13,17 @@ class DetailViewController: UIViewController {
         case fade
     }
     
-    var searchResult: SearchResult!
+    var searchResult: SearchResult! {
+        didSet {
+            if isViewLoaded {
+                updateUI()
+            }
+        }
+    }
+    
     var downloadTask: URLSessionDownloadTask?
     var dismissStyle = AnimationStyle.fade
+    var isPopUp = false
     
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
@@ -28,24 +36,31 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        popupView.layer.cornerRadius = 10
-        
-        let gestureRecognizer = UITapGestureRecognizer(target: self,
-                                                       action: #selector(close))
-        gestureRecognizer.cancelsTouchesInView = false
-        gestureRecognizer.delegate = self
-        view.addGestureRecognizer(gestureRecognizer)
+        if isPopUp {
+            popupView.layer.cornerRadius = 10
+            
+            let gestureRecognizer = UITapGestureRecognizer(target: self,
+                                                           action: #selector(close))
+            
+            gestureRecognizer.cancelsTouchesInView = false
+            gestureRecognizer.delegate = self
+            
+            view.addGestureRecognizer(gestureRecognizer)
+            view.backgroundColor = UIColor.clear
+            
+            let dimmingView = GradientView(frame: CGRect.zero)
+            dimmingView.frame = view.bounds
+            
+            view.insertSubview(dimmingView, at: 0)
+        } else {
+            view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+            
+            popupView.isHidden = true
+        }
         
         if searchResult != nil {
             updateUI()
         }
-        
-        view.backgroundColor = UIColor.clear
-        
-        let dimmingView = GradientView(frame: CGRect.zero)
-        dimmingView.frame = view.bounds
-        
-        view.insertSubview(dimmingView, at: 0)
     }
     
     deinit {
@@ -106,6 +121,8 @@ class DetailViewController: UIViewController {
         if let largeURL = URL(string: searchResult.imageLarge) {
             downloadTask = artworkImageView.loadImage(url: largeURL)
         }
+        
+        popupView.isHidden = false
     }
 }
 

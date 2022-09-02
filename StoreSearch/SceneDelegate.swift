@@ -10,6 +10,20 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    var splitViewController: UISplitViewController {
+        return window!.rootViewController as! UISplitViewController
+    }
+    var searchViewController: SearchViewController {
+        let navigation = splitViewController.viewControllers.first as! UINavigationController
+        
+        return navigation.viewControllers.first as! SearchViewController
+    }
+    var detailViewController: DetailViewController {
+        let navigation = splitViewController.viewControllers.last as! UINavigationController
+        
+        return navigation.viewControllers.first as! DetailViewController
+    }
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +31,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        searchViewController.splitViewDetail = detailViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
