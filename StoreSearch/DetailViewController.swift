@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     enum AnimationStyle {
@@ -56,6 +57,10 @@ class DetailViewController: UIViewController {
             view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
             
             popupView.isHidden = true
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
+                                                                target: self,
+                                                                action: #selector(showPopover(_:)))
         }
         
         if searchResult != nil {
@@ -124,6 +129,20 @@ class DetailViewController: UIViewController {
         
         popupView.isHidden = false
     }
+    
+    @objc func showPopover(_ sender: UIBarButtonItem) {
+        guard let popover = storyboard?.instantiateViewController(withIdentifier: "PopoverView") as? MenuViewController else { return }
+        
+        popover.modalPresentationStyle = .popover
+        
+        if let popoverPresentationController = popover.popoverPresentationController {
+            popoverPresentationController.barButtonItem = sender
+        }
+        
+        popover.delegate = self
+        
+        present(popover, animated: true, completion: nil)
+    }
 }
 
 extension DetailViewController: UIGestureRecognizerDelegate {
@@ -144,5 +163,27 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
         case .fade:
             return FadeOutAnimationController()
         }
+    }
+}
+
+extension DetailViewController: MenuViewControllerDelegate {
+    func menuViewControllerSendEmail(_ controller: MenuViewController) {
+        dismiss(animated: true) {
+            if MFMailComposeViewController.canSendMail() {
+                let controller = MFMailComposeViewController()
+                
+                controller.mailComposeDelegate = self
+                controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
+                controller.setToRecipients(["aumetov7@gmail.com"])
+                
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
     }
 }

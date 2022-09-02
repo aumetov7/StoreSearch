@@ -11,6 +11,7 @@
 		D824823F28C0D25700C0EFC5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D824824128C0D25700C0EFC5 /* LoadingCell.xib */; };
 		D824824828C0D7B000C0EFC5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D824824A28C0D7B000C0EFC5 /* Localizable.strings */; };
 		D824824E28C0DDAC00C0EFC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D824825028C0DDAC00C0EFC5 /* InfoPlist.strings */; };
+		D866EE0728C22874007A57E2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D866EE0628C22874007A57E2 /* MenuViewController.swift */; };
 		D8B32CC228B4E367005D923F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC128B4E367005D923F /* AppDelegate.swift */; };
 		D8B32CC428B4E367005D923F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC328B4E367005D923F /* SceneDelegate.swift */; };
 		D8B32CC628B4E367005D923F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B32CC528B4E367005D923F /* SearchViewController.swift */; };
@@ -39,6 +40,7 @@
 		D824824B28C0D8D300C0EFC5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D824824F28C0DDAC00C0EFC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D824825128C0DDB200C0EFC5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D866EE0628C22874007A57E2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D8B32CBE28B4E367005D923F /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B32CC128B4E367005D923F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B32CC328B4E367005D923F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				D8B32CD928B5039F005D923F /* SearchResultCell.swift */,
 				D8B32CE928BDF25F005D923F /* LandscapeViewController.swift */,
 				D8B32CE128B8D7FF005D923F /* DetailViewController.swift */,
+				D866EE0628C22874007A57E2 /* MenuViewController.swift */,
 				D8B32CE328BCF747005D923F /* GradientView.swift */,
 				D8B32CE528BCFDA3005D923F /* BounceAnimationController.swift */,
 				D8B32CE728BD00B4005D923F /* SlideOutAnimationController.swift */,
@@ -193,6 +196,7 @@
 				D8B32CEE28BF6F31005D923F /* Search.swift in Sources */,
 				D8B32CC628B4E367005D923F /* SearchViewController.swift in Sources */,
 				D8B32CC228B4E367005D923F /* AppDelegate.swift in Sources */,
+				D866EE0728C22874007A57E2 /* MenuViewController.swift in Sources */,
 				D8B32CEC28BE009B005D923F /* FadeOutAnimationController.swift in Sources */,
 				D8B32CE028B79CF2005D923F /* UIImageView+DownloadImage.swift in Sources */,
 				D8B32CD628B4EF8A005D923F /* SearchResult.swift in Sources */,
